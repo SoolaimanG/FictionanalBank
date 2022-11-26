@@ -1,0 +1,923 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+body {
+  overflow-x: hidden;
+}
+header {
+  padding: 2% 0px;
+  background-color: #fff;
+  width: 100%;
+  position: fixed;
+}
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+.container h2 {
+  font-size: 2rem;
+}
+.nav_list {
+  display: flex;
+}
+.nav_list ul {
+  display: flex;
+}
+.nav_list ul li {
+  font-size: 1.2rem;
+  padding: 0px 18px;
+}
+.nav_list a {
+  padding: 10px 15px;
+  color: #292736;
+  font-weight: 900;
+  transition: 0.3s;
+}
+.nav_list span {
+  padding: 10px 15px;
+  background-color: #393b8f;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+}
+.nav_list a:hover {
+  color: #ff734f;
+  inset: 200px #393b8f;
+}
+.nav_list span:hover {
+  background-color: #ff734f;
+  color: #292736;
+  transition: 0.3s;
+}
+.nav_list i {
+  font-size: 1.8rem;
+  padding: 10px;
+  color: #393b8f;
+  border-radius: 50px;
+}
+#bars {
+  display: none;
+}
+#times {
+  display: none;
+}
+
+/* SIGN UP POPUP */
+.SignUp {
+  z-index: 2;
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  background-color: #393b8f;
+  padding: 3% 6%;
+  border-radius: 5px;
+}
+.loginKey {
+  z-index: 2;
+  display: block;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  background-color: #393b8f;
+  padding: 3% 6%;
+  border-radius: 5px;
+}
+.loginKey form {
+  position: relative;
+}
+.loginKey form ul {
+  text-align: center;
+  padding: 3% 0px;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: -20px;
+}
+.hidden {
+  display: none;
+}
+.loginKey form label + input {
+  margin: 3% 0px;
+  padding: 1% 0px;
+  color: #0d0d0d;
+}
+.loginKey form label {
+  color: #f1f1f6;
+}
+.loginKey button {
+  padding: 3% 4%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #ff734f;
+  border: #ff734f 2px solid;
+  font-size: 0.9rem;
+  color: #393b8f;
+  transition: 0.4s;
+}
+.loginKey button:hover {
+  background-color: #292736;
+  color: #fff;
+}
+.BTN1 {
+  font-size: 1.3rem;
+  color: #f1f1f6;
+}
+.SignUp form {
+  position: relative;
+}
+.SignUp form ul {
+  text-align: center;
+  padding: 3% 0px;
+  color: #fff;
+  font-size: 1.5rem;
+  margin-top: -20px;
+}
+.SignUp form label + input {
+  margin: 3% 0px;
+  padding: 1% 0px;
+}
+.SignUp button {
+  padding: 3% 4%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #ff734f;
+  border: #ff734f 2px solid;
+  font-size: 0.9rem;
+  color: #393b8f;
+  transition: 0.4s;
+}
+.SignUp button:hover {
+  background-color: #292736;
+  color: #fff;
+}
+.position {
+  position: relative;
+}
+.opacity {
+  display: none;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border: 0px none transparent;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  -webkit-tap-highlight-color: transparent;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease 0s;
+  visibility: visible;
+  border: none !important;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+  z-index: 0.3;
+}
+.close_icon {
+  position: absolute;
+  right: 20px;
+  font-size: 1.5rem;
+}
+.close_icon i {
+  color: #ff734f;
+}
+.hidden {
+  display: none;
+}
+.landing {
+  padding: 17% 5%;
+  background: url(bankBackground.jpg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat;
+  width: 100%;
+  min-height: 100vh;
+}
+.landing h2 {
+  font-size: 3rem;
+  color: #ffffff;
+}
+.landing h2 span {
+  background-color: #ff734f;
+  padding: 5px 10px;
+}
+.landing details summary {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  font-size: 1.8rem;
+  margin-top: 2%;
+  padding: 10px 15px;
+  background: transparent;
+  border: #ff734f 2px solid;
+  color: #fff;
+}
+.landing details summary i {
+  font-size: 1.2rem;
+  padding: 4px 3px;
+  margin-left: 3%;
+}
+.landing details p {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.offer_writeUps {
+  width: 90%;
+  min-height: auto;
+  margin: auto;
+  padding-top: 7%;
+}
+.offer_writeUps h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  color: #393b8f;
+  text-decoration: underline;
+}
+.offer_display {
+  display: flex;
+  gap: 14px;
+  margin-top: 5%;
+}
+.offer_display img {
+  width: 390px;
+  height: 350px;
+  border-radius: 10px;
+}
+.about_us {
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+.aboutUs_writeUp h2 {
+  text-align: center;
+  padding: 20px 0px;
+  font-size: 1.9rem;
+  color: #393b8f;
+  text-decoration: underline;
+}
+.aboutUs_writeUp p {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+.aboutUs_icons {
+  display: flex;
+  margin-top: 2%;
+  gap: 10px;
+}
+.aboutUs_div1 {
+  font-size: 1.2rem;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+  background-color: #393b8f;
+  border-radius: 5px;
+}
+.login {
+  width: 90%;
+  margin: auto;
+  height: 40vh;
+}
+.login h3 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #393b8f;
+}
+.login p {
+  padding-top: 2%;
+}
+.login button {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f1f1f6;
+  background-color: #393b8f;
+  padding: 10px 20px;
+  margin-top: 2%;
+}
+.login_Btn button a {
+  color: #f1f1f6;
+}
+footer {
+  width: 100%;
+  background-color: #292736;
+  color: #f1f1f6;
+}
+.footer_writeUp {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  gap: 10px;
+  height: 50vh;
+}
+.telPhone {
+  display: flex;
+  padding-top: 10px;
+  gap: 10px;
+}
+.Line {
+  padding: 10px 20px;
+}
+.Line h2 {
+  padding: 10px 0px;
+  font-size: 1.4rem;
+}
+.Line a {
+  color: #eeee;
+  text-decoration: none;
+}
+.Line ul li {
+  font-size: 1.1rem;
+  padding: 2px;
+}
+.Line button {
+  padding: 8px 20px;
+  color: #f1f1f6;
+  background-color: #393b8f;
+  border: #393b8f 2px solid;
+  font-size: 1rem;
+}
+.Line input {
+  width: 165px;
+}
+.contactUs_input {
+  display: inline-block;
+}
+.listOfIcons {
+  display: flex;
+}
+.listOfIcons ul {
+  padding: 40px 25px;
+  background-color: #393b8f;
+  width: 100px;
+  height: 100vh;
+}
+.listOfIcons ul li {
+  padding: 50px 20px;
+}
+.listOfIcons ul li a {
+  color: #f1f1f6;
+  font-size: 1.4rem;
+}
+.landingPage_login {
+  padding: 60px 30px;
+}
+.homePage {
+  margin-top: 20%;
+  text-align: left;
+  padding: 30px 35px;
+  background: linear-gradient(
+    to right,
+    hsl(0, 0%, 96%) 0%,
+    hsl(220.05, 20.27%, 92%) 1.5%,
+    hsl(219.81, 26.91%, 88.48%) 4.1%,
+    hsl(219.58, 30.38%, 85.4%) 7.6%,
+    hsl(219.36, 32.61%, 82.71%) 12%,
+    hsl(219.14, 34.22%, 80.36%) 17.3%,
+    hsl(218.94, 35.48%, 78.25%) 23.2%,
+    hsl(218.72, 36.53%, 76.3%) 29.9%,
+    hsl(218.5, 37.5%, 74.4%) 37.2%,
+    hsl(218.25, 38.45%, 72.42%) 45.1%,
+    hsl(217.95, 39.47%, 70.22%) 53.4%,
+    hsl(217.55, 40.64%, 67.61%) 62.2%,
+    hsl(216.98, 42.07%, 64.37%) 71.3%,
+    hsl(216.09, 43.96%, 60.1%) 80.7%,
+    hsl(214.46, 46.74%, 54.07%) 90.3%,
+    hsl(209.8, 69.86%, 42.94%) 100%
+  );
+  border-radius: 9px;
+}
+.landingPage_content {
+  color: #f1f1f6;
+}
+.landingPage_content span {
+  color: #393b8f;
+}
+.activities {
+  padding: 20px 10px;
+}
+.activities button {
+  background-color: #393b8f;
+  padding: 7px 15px;
+  color: #f1f1f6;
+  font-size: 1rem;
+  border: #393b8f solid 2px;
+}
+.historyWriteUp h2 {
+  display: flex;
+}
+.historyWriteUp_icon i {
+  font-size: 1rem;
+}
+.Histoty {
+  padding: 30px 35px;
+  margin-top: 9%;
+  margin-left: 15%;
+  background-color: #292736;
+  width: 350px;
+  border-radius: 5px;
+  height: 70vh;
+}
+.Histoty h2 {
+  background-color: #393b8f;
+  color: #f1f1f6;
+  flex-basis: 40%;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.iconOne {
+  display: block;
+}
+.creditIcon {
+  display: flex;
+  gap: 8px;
+}
+.creditIcon i {
+  margin-top: 3px;
+}
+.credit {
+  margin-top: 10%;
+  padding: 5px 10px;
+  background-color: #f1f1f6;
+  border-radius: 4px;
+  border-left: #da0a0a solid 8px;
+}
+.login_Btn a {
+  color: #f1f1f6;
+}
+.sendOption {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #393b8f;
+  padding: 4% 3%;
+  border-radius: 5px;
+}
+.fa-times {
+  top: 0;
+  right: 0;
+  position: absolute;
+  color: #ff734f;
+  font-size: 1.3rem;
+}
+.position {
+  position: relative;
+}
+.sendOption h2 {
+  margin-bottom: 20px;
+}
+.sendOption form label,
+input {
+  margin: 3% 0px;
+  padding: 1% 0px;
+}
+.together label {
+  color: #eeee;
+  font-size: 1.1rem;
+}
+.sendOption button {
+  padding: 3% 4%;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #ff734f;
+  border: #ff734f 2px solid;
+  font-size: 0.9rem;
+  color: #393b8f;
+  transition: 0.4s;
+}
+.sendOption button:hover {
+  background-color: #292736;
+  color: #fff;
+}
+.login {
+  height: auto;
+  padding-top: 3%;
+}
+.footer_writeUp {
+  height: auto;
+}
+.opacity {
+  display: none;
+  opacity: 1;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border: 0px none transparent;
+  overflow: hidden;
+  margin: 0px;
+  padding: 0px;
+  -webkit-tap-highlight-color: transparent;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.3s ease 0s;
+  visibility: visible;
+  border: none !important;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -o-user-select: none;
+  z-index: 0.3;
+}
+.debit {
+  margin-top: 10%;
+  padding: 5px 10px;
+  background-color: #f1f1f6;
+  border-radius: 4px;
+  border-left: #0be32f solid 8px;
+}
+@media (max-width: 650px) {
+  .nav_list {
+    transition: 0.3s;
+  }
+  .nav_list ul {
+    display: block;
+    background-color: inherit;
+    margin: 50px -70px;
+  }
+  .nav_list ul li {
+    font-size: 1.2rem;
+    padding: 56px 10px;
+    right: 0;
+  }
+  .list_hide {
+    display: none;
+  }
+  #bars {
+    display: block;
+  }
+  .SignUp {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: #393b8f;
+    padding: 7% 6%;
+    border-radius: 5px;
+  }
+  .landing details summary {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 1.8rem;
+    margin-top: 20%;
+    padding: 10px 15px;
+    background: transparent;
+    border: #ff734f 2px solid;
+    color: #fff;
+  }
+  .landing {
+    padding: 50% 5%;
+    background: url(bankBackground.jpg);
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .offer_writeUps {
+    width: 85%;
+    min-height: 100vh;
+    margin: 0px 50px;
+    padding-top: 7%;
+  }
+  .offer_display {
+    display: block;
+    gap: 14px;
+    margin-top: 5%;
+  }
+  .offer_display img {
+    width: 300px;
+    height: 270px;
+    border-radius: 10px;
+  }
+  .aboutUs_div1 {
+    font-size: 1rem;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    gap: 10px;
+    background-color: #393b8f;
+    border-radius: 5px;
+  }
+  .about_us {
+    width: 85%;
+    height: auto;
+    margin: 20px 40px;
+    padding-top: 10%;
+  }
+  .aboutUs_writeUp p {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .login {
+    width: 85%;
+    margin: auto;
+    height: auto;
+  }
+  footer {
+    width: 100%;
+    background-color: #292736;
+    color: #f1f1f6;
+  }
+  .footer_writeUp {
+    display: block;
+    width: 90%;
+    margin: auto;
+    gap: 10px;
+    height: auto;
+  }
+  .listOfIcons {
+    display: block;
+  }
+  .iconOne {
+    display: inline-flex;
+    padding-top: 2px;
+    justify-content: space-between;
+  }
+  .listOfIcons ul {
+    position: fixed;
+    display: flex;
+    padding: 0px 70px 80px;
+    background-color: #393b8f;
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+  }
+  .listOfIcons li {
+    padding: 10px 40px;
+  }
+  .activities {
+    padding: 10px 7px;
+    width: auto;
+  }
+  .activities button {
+    background-color: #393b8f;
+    padding: 7px 13px;
+    color: #f1f1f6;
+    font-size: 0.9rem;
+    border: #393b8f solid 2px;
+  }
+  .Histoty {
+    padding: 10px 15px;
+    margin-top: 2%;
+    margin-left: 12%;
+    background-color: #292736;
+    width: 300px;
+    border-radius: 5px;
+    height: 50vh;
+  }
+  .Histoty h2 {
+    background-color: #393b8f;
+    color: #f1f1f6;
+    flex-basis: 40%;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  .homePage {
+    margin-top: 20%;
+    text-align: left;
+    padding: 20px 15px;
+    border-radius: 9px;
+  }
+  header ul li {
+    z-index: 1000;
+  }
+  .loginKey {
+    z-index: 2;
+    display: block;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    background-color: #393b8f;
+    padding: 5% 6%;
+    border-radius: 5px;
+    height: auto;
+  }
+}
+@media (max-width: 736px) and (min-width: 650px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav_list {
+    transition: 0.3s;
+  }
+  .nav_list ul {
+    display: block;
+    background-color: inherit;
+    margin: 50px -70px;
+  }
+  .nav_list ul li {
+    font-size: 1.2rem;
+    padding: 56px 10px;
+    right: 0;
+  }
+  .list_hide {
+    display: none;
+  }
+  #bars {
+    display: block;
+  }
+  .SignUp {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: #393b8f;
+    padding: 7% 6%;
+    border-radius: 5px;
+  }
+  .landing details summary {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    font-size: 1.8rem;
+    margin-top: 20%;
+    padding: 10px 15px;
+    background: transparent;
+    border: #ff734f 2px solid;
+    color: #fff;
+  }
+  .landing {
+    padding: 50% 5%;
+    background: url(bankBackground.jpg);
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+  }
+  .offer_writeUps {
+    width: 85%;
+    min-height: 100vh;
+    margin: 0px 23%;
+    padding-top: 7%;
+  }
+  .offer_writeUps h2 {
+    text-align: center;
+    font-size: 1.9rem;
+    color: #393b8f;
+    text-decoration: underline;
+    padding-right: 90px;
+  }
+  .offer_display {
+    display: block;
+    gap: 14px;
+    margin-top: 5%;
+  }
+  .offer_display img {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+  }
+  .aboutUs_div1 {
+    font-size: 1rem;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    gap: 10px;
+    background-color: #393b8f;
+    border-radius: 5px;
+  }
+  .about_us {
+    width: 85%;
+    height: auto;
+    margin: 20px 40px;
+    padding-top: 10%;
+  }
+  .aboutUs_writeUp p {
+    font-size: 1rem;
+    font-weight: 800;
+  }
+  .login {
+    width: 85%;
+    margin: auto;
+    height: auto;
+  }
+  footer {
+    width: 100%;
+    background-color: #292736;
+    color: #f1f1f6;
+  }
+  .footer_writeUp {
+    display: block;
+    width: 90%;
+    margin: auto;
+    gap: 10px;
+    height: auto;
+  }
+  .listOfIcons {
+    display: block;
+  }
+  .iconOne {
+    display: inline-flex;
+    padding-top: 2px;
+    justify-content: space-between;
+  }
+  .listOfIcons ul {
+    position: fixed;
+    display: flex;
+    padding: 0px 70px 80px;
+    background-color: #393b8f;
+    width: 100%;
+    height: 100px;
+    bottom: 0px;
+  }
+  .listOfIcons li {
+    padding: 10px 40px;
+  }
+  .activities {
+    padding: 10px 7px;
+    width: auto;
+  }
+  .activities button {
+    background-color: #393b8f;
+    padding: 7px 13px;
+    color: #f1f1f6;
+    font-size: 0.9rem;
+    border: #393b8f solid 2px;
+  }
+  .Histoty {
+    padding: 10px 15px;
+    margin-top: 2%;
+    margin-left: 12%;
+    background-color: #292736;
+    width: 300px;
+    border-radius: 5px;
+    height: 50vh;
+  }
+  .Histoty h2 {
+    background-color: #393b8f;
+    color: #f1f1f6;
+    flex-basis: 40%;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  .homePage {
+    margin-top: 20%;
+    text-align: left;
+    padding: 20px 15px;
+    border-radius: 9px;
+  }
+  .loginKey {
+    z-index: 2;
+    display: block;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    background-color: #393b8f;
+    padding: 5% 6%;
+    border-radius: 5px;
+    height: auto;
+  }
+  .SignUp input {
+    width: 250px;
+    border-radius: 5px;
+    border: #f1f1f6 solid 2px;
+  }
+  #password {
+    width: 230px;
+  }
+}
+@media (max-width: 943px) and (min-width: 736px) {
+  .container {
+    max-width: 90%;
+  }
+  .container h2 {
+    width: 100px;
+    font-size: 1.5rem;
+  }
+  .SignUp {
+    width: 400px;
+    height: 200px;
+  }
+}
